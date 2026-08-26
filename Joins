@@ -1,1 +1,11 @@
+California sales tax law has changed
+and we need to alert our customers to this through email.
+So the question is, what are the emails
+of the customers who live in California?
 
+
+select first_name , last_name ,email ,district 
+from customer 
+inner join address 
+on customer.address_id = address.address_id
+where district = 'California';
